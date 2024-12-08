@@ -1386,6 +1386,7 @@ img {
 
 .top_access_address-txt {
   font-size: 20px;
+  white-space: nowrap;
 }
 
 .top_access_time {
@@ -1395,6 +1396,18 @@ img {
 
 .top_access_time-txt {
   font-size: 20px;
+}
+
+/* デフォルト: 改行を無効にする */
+.top_access_break {
+  display: none; /* brタグを無効に */
+}
+
+/* 768px以上: 改行を有効にする */
+@media (min-width: 768px) and (max-width: 1087px) {
+  .top_access_break {
+      display: inline; /* brタグを有効に */
+  }
 }
 
 .top_access_google-map {

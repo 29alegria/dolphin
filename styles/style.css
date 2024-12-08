@@ -501,7 +501,7 @@ img {
 
 /* ---------- l_footer ---------- */
 .l_footer {
-  background-color: var(--white-color);
+  background-color: var(--base-color);
 }
 
 .l_footer_info {

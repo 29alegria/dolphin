@@ -554,3 +554,81 @@ img {
   transform: rotate(135deg);
   left: 29%;
 }
+
+
+/* ---------- top-kv ---------- */
+.top_kv {
+  height: calc(100vh);
+  max-height: 1000px;
+  padding-top: 72px;
+  background: linear-gradient(rgba(51, 51, 51, 0.4), rgba(51, 51, 51, 0.4));
+}
+
+.top_kv-inner {
+  position: relative;
+  /* top_kv_boxとtop_kv―scrollをkvの上下左右中央配置にする基準。 */
+  height: 100%;
+  /* position:relative;によってheightが効かなくなるためheight:100% */
+}
+
+.top_kv_box {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* kvのなかでbox全体を上下左右中央寄せ */
+
+  text-align: center;
+  /* ボックス内のテキストを中央寄せ */
+
+  width: 100%;
+  /* ブロック要素はデフォルトでは親要素の幅いっぱいに広がります
+  しかしdivタグはデフォルトでは親要素の幅いっぱいに広がりません。
+  親要素の幅いっぱいに広げるためには、明示的にwidth: 100%;などのスタイル指定が必要
+  top_kv-innerの幅いっぱいに広がる⇒top_kv-innerはl_container-lgで最大幅も指定されているため
+  PC時はその幅に合わせて位置変更される */
+}
+
+@media screen and (min-width: 1088px) {
+  .top_kv_box {
+    text-align: left;
+    left: 16px;
+    transform: translateX(0);
+    /* 親要素のtop_kv-innerと一緒に指定しているl_container-lgにはpadding：0 16px;が指定されているため、
+    left:0;だと無視してしまう。余白分左から右に位置する。 */
+  }
+}
+
+.top_kv_copy {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--base-color);
+  text-shadow: 2px 2px 2px rgba(170, 170, 170, 0.16);
+}
+
+@media screen and (min-width: 768px) {
+  .top_kv_copy {
+    font-size: 42px;
+  }
+}
+
+@media screen and (min-width: 1088px) {
+  .top_kv_copy {
+    font-size: 48px;
+  }
+}
+
+.top_kv_sub-copy {
+  margin-top: 16px;
+  /* copyとsub-copyの上下余白 */
+  font-weight: bold;
+  color: var(--base-color);
+}
+
+@media screen and (min-width: 768px) {
+  .top_kv_sub-copy {
+    font-size: 18px;
+    margin-top: 2%;
+    /* copyとsub-copyの上下余白 */
+  }
+}

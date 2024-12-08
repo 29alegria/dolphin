@@ -1344,6 +1344,72 @@ img {
 
 
 /* ---------- top_access ---------- */
+.top_access-inner {
+  margin-top: 64px;
+}
 
+@media screen and (min-width: 768px) {
+  .top_access-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .top_access_content-box {
+    width: 30%;
+  }
+}
+
+.top_access_head {
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  padding-left: 20px;
+}
+
+.top_access_head::before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  background: var(--main-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.top_access_address {
+  margin-top: 24px;
+  padding: 0 16px;
+}
+
+.top_access_address-txt {
+  font-size: 20px;
+}
+
+.top_access_time {
+  margin-top: 24px;
+  padding: 0 16px;
+}
+
+.top_access_time-txt {
+  font-size: 20px;
+}
+
+.top_access_google-map {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .top_access_google-map {
+    margin-top: 0;
+    width: 60%;
+  }
+}
+
+iframe {
+  width: 100%;
+}
 
 /* ---------- top_blog ---------- */

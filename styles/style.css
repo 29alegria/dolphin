@@ -1050,7 +1050,7 @@ img {
   /* ホバー時のサムネイル拡大下地。 */
 }
 
-@media screen and (min-width: 1088px) {
+@media screen and (min-width: 768px) {
   .m_article-item:hover .m_article-item_thumb {
     transform: scale(1.06);
     /* 「.m_article-item」の記事全体をホバーしたら、「article-item_thumb」のサムネイルが拡大する。 */

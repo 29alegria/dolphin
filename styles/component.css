@@ -93,6 +93,13 @@ img {
 @media screen and (min-width: 1088px) {
   .l_header {
     height: 80px;
+    padding: 0 0 0 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .l_header {
+    height: 80px;
     padding: 0 0 0 100px;
   }
 }

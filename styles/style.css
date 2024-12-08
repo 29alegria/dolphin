@@ -505,7 +505,7 @@ img {
 }
 
 .l_footer_info {
-  padding: 64px 16px;
+  padding: 80px 0;
   text-align: center;
 }
 
@@ -594,7 +594,7 @@ img {
 }
 
 .l_footer-menu {
-  padding: 64px 16px;
+  padding: 80px 0;
   background-color: var(--accent-color);
 }
 

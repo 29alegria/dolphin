@@ -876,6 +876,12 @@ img {
   margin-top: 24px;
 }
 
+@media screen and (min-width: 768px) {
+  .top_service_content {
+    margin-top: 0;
+  }
+}
+
 .top_service_content_head {
   font-size: 18px;
   font-weight: bold;

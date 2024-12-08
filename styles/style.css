@@ -721,7 +721,7 @@ img {
 
 .top_kv_box {
   position: absolute;
-  top: 33%;
+  top: 39%;
   left: 50%;
   transform: translateX(-50%);
   /* kvのなかでbox全体を上下左右中央寄せ */
@@ -737,9 +737,16 @@ img {
   PC時はその幅に合わせて位置変更される */
 }
 
+@media screen and (min-width: 768px) {
+  .top_kv_box {
+    top: 35%;
+  }
+}
+
 @media screen and (min-width: 1088px) {
   .top_kv_box {
     text-align: left;
+    top: 33%;
     left: 16px;
     transform: translateX(0);
     /* 親要素のtop_kv-innerと一緒に指定しているl_container-lgにはpadding：0 16px;が指定されているため、

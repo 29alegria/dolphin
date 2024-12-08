@@ -555,6 +555,52 @@ img {
   left: 29%;
 }
 
+/* ---------- btn ---------- */
+/* divのwrapperでボタンの横幅、縦幅、上下余白を指定 */
+/* 共通 */
+.m_btn {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* タグの中の要素（テキスト）を上下左右中央寄せ3点セット */
+  transition: opacity 0.3s ease;
+  /* ホバー時のかかる時間 */
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
+  /* ボタンの影 */
+  color: var(--white-color);
+  font-weight: bold;
+  overflow: hidden;
+  /* 角がある「m_btn_input」を角を丸めた「m_btn」の幅と高さいっぱいに広げたことによりはみ出した部分を隠して丸みに収める */
+}
+
+.m_btn:hover {
+  opacity: 0.9;
+  /* m_btnをホバー時に0.9透明になる */
+}
+
+/* btn_right-arrow */
+.m_btn__right-arrow {
+  background: var(--main-color);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.m_btn__right-arrow:hover .m_arrow-wrapper {
+  transform: translateX(5px);
+}
+
+.m_btn__right-arrow .m_arrow {
+  border-top: 2px solid var(--base-color);
+  border-right: 2px solid var(--base-color);
+}
+
+.m_btn__right-arrow .m_arrow__round {
+  border: 2px solid var(--base-color);
+}
 
 /* ---------- top-kv ---------- */
 .top_kv {
@@ -637,4 +683,125 @@ img {
     margin-top: 2%;
     /* copyとsub-copyの上下余白 */
   }
+}
+
+/* ---------- top-section-title ---------- */
+.top_section_title {
+  text-align: center;
+  position: relative;
+}
+
+.top_section_title::before,
+.top_section_title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* 上下中央寄せ */
+  height: 2px;
+  width: calc((100% - 52px - 152px - 32px) / 2);
+  /* 幅と高さ */
+  background: var(--accent-color);
+}
+
+.top_section_title::before {
+  left: 0;
+}
+
+.top_section_title::after {
+  right: 0;
+}
+
+@media screen and (min-width: 1088px) {
+  .top_section_title::before,
+.top_section_title::after {
+  width: calc((100% - 330px) / 2);
+}
+}   
+
+.top_section_title_sub {
+  font-size: 32px;
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1088px) {
+  .top_section_title_sub {
+    font-size: 40px;
+  }
+}
+
+.top_section_title_main {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1088px) {
+  .top_section_title_main {
+    font-size: 32px;
+  }
+}
+
+/* ---------- top_service ---------- */
+.top_service_contents {
+  margin-top: 64px;
+}
+
+@media screen and (min-width: 768px) {
+  .top_service_content-box {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .top_service_content-box:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+}
+
+.top_service_content-box:not(:first-child) {
+  margin-top: 40px;
+}
+
+.top_service_content-box_img-wrapper {
+  width: 343px;
+  height: 200px;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .top_service_content-box_img-wrapper {
+    flex-shrink: 0;
+    width: 50%;
+  }
+}
+
+.top_service_content {
+  margin-top: 24px;
+}
+
+.top_service_content_head {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .top_service_content_head {
+    text-align: left;
+    font-size: 24px;
+  }
+}
+
+.top_service_content_txt {
+  margin-top: 24px;
+}
+
+.top-service_btn-wrapper {
+  margin: 64px auto 0;
+  max-width: 343px;
+  height: 64px;
 }

@@ -1212,7 +1212,24 @@ img {
   font-size: 18px;
   font-weight: bold;
   text-align: center;
+  position: relative;
 }
+
+/* .top_service_content_head::after {
+  font-size: 32px;
+  color: var(--main-color);
+  position: absolute;
+  top: -200%;
+  right: 10%;
+}
+
+.top_service_content_head__road::after {
+  content: "01";
+}
+
+.top_service_content_head__event::after {
+  content: "02";
+} */
 
 @media screen and (min-width: 768px) {
   .top_service_content_head {

@@ -1038,6 +1038,7 @@ img {
 .m_article-item {
   box-shadow: 2px 2px 4px 0px rgba(170, 170, 170, 0.16);
   background-color: var(--white-color);
+  margin: 0 auto;
 }
 
 .m_article-item_thumb-wrapper {

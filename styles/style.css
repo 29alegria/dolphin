@@ -606,7 +606,7 @@ img {
 }
 
 
-/* ---------- form-cta ---------- */
+/* ---------- m_cta_form ---------- */
 .m_cta__form {
   padding: 80px 0;
   background: linear-gradient(to bottom, #FDEB71 0%, #FFCC58 60%, #FFCC58 100%);;
@@ -696,6 +696,51 @@ img {
   .m_cta__form .m_form_btn-wrapper {
     margin: 40px 0 0 auto;
   }
+}
+
+
+/* ---------- m_recruit-cta ---------- */
+.m_cta__recruit {
+  background: var(--accent-color);
+  padding: 80px 0;
+}
+
+.m_cta__recruit .top_section_title_main {
+  color: var(--base-color);
+}
+
+.m_cta__recruit .top_section_title::before,
+.m_cta__recruit .top_section_title::after {
+  background-color: var(--main-color);
+}
+
+.m_cta__recruit-txt {
+  margin-top: 40px;
+  text-align: center;
+  color: var(--base-color);
+}
+
+@media screen and (min-width: 768px) {
+  .m_cta__recruit-txt {
+    margin-top: 64px;
+  }
+}
+
+/* btn_recruit */
+.m_recruit_btn-wrapper {
+  margin: 40px auto 0;
+  max-width: 343px;
+  height: 64px;
+}
+
+@media screen and (min-width: 768px) {
+  .m_recruit_btn-wrapper {
+    margin: 64px auto 0;
+  }
+}
+
+.m_recruit_btn {
+  background: var(--point-color);
 }
 
 /* ---------- top-kv ---------- */

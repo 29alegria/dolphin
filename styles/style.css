@@ -904,6 +904,12 @@ img {
   font-weight: bold;
 }
 
+@media screen and (min-width: 450px) {
+  .m_cta__form-txt {
+    font-size: 24px;
+  }
+}
+
 @media screen and (min-width: 896px) {
   .m_cta__form-txt {
     font-size: 32px;
@@ -1013,6 +1019,90 @@ img {
 
 .m_recruit_btn {
   background: var(--point-color);
+}
+
+/* ---------- m_article ---------- */
+.m_article-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 64px;
+}
+
+@media screen and (min-width: 768px) {
+  .m_article-list__col-3 > .m_article-item {
+    width: calc((100% - 48px) / 3);
+  }
+}
+
+.m_article-item {
+  box-shadow: 2px 2px 4px 0px rgba(170, 170, 170, 0.16);
+  background-color: var(--white-color);
+}
+
+.m_article-item_thumb-wrapper {
+  overflow: hidden;
+}
+
+.m_article-item_thumb {
+  transition: transform 0.34s;
+  /* ホバー時のサムネイル拡大下地。 */
+}
+
+@media screen and (min-width: 1088px) {
+  .m_article-item:hover .m_article-item_thumb {
+    transform: scale(1.06);
+    /* 「.m_article-item」の記事全体をホバーしたら、「article-item_thumb」のサムネイルが拡大する。 */
+  }
+}
+.m_article-item_txt {
+  padding: 24px;
+  /* 記事のテキスト全体の余白 */
+}
+
+@media screen and (min-width: 768px) {
+  .m_article-item_txt {
+    padding: 16px;
+    /* 記事のテキスト全体の余白 */
+  }
+}
+
+.m_article-item_meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.m_article-item_meta-date {
+  color: var(--gray-color);
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+.m_article-item_meta-cat {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--main-color);
+  background-color: var(--base-color);
+  border: 2px solid var(--main-color);
+  border-radius: 4px;
+  width: 120px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.m_article-item_title {
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.top-blog_btn-wrapper {
+  max-width: 343px;
+  height: 64px;
+  margin: 64px auto 0;
 }
 
 /* ---------- top-kv ---------- */

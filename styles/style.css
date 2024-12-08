@@ -564,6 +564,12 @@ img {
   background: linear-gradient(rgba(51, 51, 51, 0.4), rgba(51, 51, 51, 0.4));
 }
 
+@media screen and (min-width: 1080px) {
+  .top_kv {
+    padding-top: 80px;
+  }
+}
+
 .top_kv-inner {
   position: relative;
   /* top_kv_boxとtop_kv―scrollをkvの上下左右中央配置にする基準。 */

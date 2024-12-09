@@ -1464,15 +1464,23 @@ img {
 
 .top_service_content-box_img-wrapper {
   width: 340px;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 9; /* アスペクト比を統一 */
   margin: 0 auto;
+  overflow: hidden; /* 必要なら画像がはみ出ないようにする */
 }
 
 @media screen and (min-width: 768px) {
   .top_service_content-box_img-wrapper {
     flex-shrink: 0;
     width: 50%;
+    aspect-ratio: 16 / 9; /* PCでも同じアスペクト比を維持 */
   }
+}
+
+.top_service_content-box_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像を枠内に収める */
 }
 
 .top_service_content {

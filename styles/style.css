@@ -789,6 +789,53 @@ img {
   color: var(--base-color);
 }
 
+/* ---------- page-top ---------- */
+.m_page-top {
+  /* 矢印を囲う枠 */
+  width: 48px;
+  height: 48px;
+  border-radius: 100vh;
+
+  position: fixed;
+  bottom: 24px;
+  right: -120px;
+  /* bottom: 24px;およびright: -120px;により、画面の右下に固定されますが、
+  初期状態では画面外に位置しています（-120px右に移動しています */
+
+  background: var(--main-color);
+  opacity: 0.5;
+  transition: 0.5s;
+  /* ホバーやクリックなどのイベントに対するアニメーション効果が設定されており、0.5秒かけて変化します */
+  z-index: var(--z-index-page-top);
+  /* 50 */
+}
+
+.m_page-top_img {
+  /* 矢印 */
+  width: 50%;
+  height: 50%;
+  /* 親要素の50％のサイズ */
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* 親要素が position: fixed; を持つと、親要素はビューポートに固定されます。
+  そのため、子要素の position: absolute; は固定された親要素を基準に位置を決めます。
+  親要素の上下左右中央に配置 */
+}
+
+.js_page-top.is-active {
+  right: 24px;
+  /*・‐120px⇒親要素を基準に右から右に120pxに位置。
+  ・24px⇒親要素を基準に右から左に24pxに位置。
+  ＝ユーザーのイベントによってjs_page-topにis-activeが付与されると、
+  js_page-topが右から左にスライドインして、
+  position: fixed;
+  bottom: 24px;
+  right: -120px;⇒24pxに */
+}
+
 /* ---------- m_arrow ---------- */
 .m_arrow {
   width: 8px;

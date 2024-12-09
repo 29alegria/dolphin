@@ -41,6 +41,24 @@ img {
   object-fit: cover; /* もし表示させたい比率と画像の比率が異なると画像が歪むので、object-fitによって制御する。 */
 }
 
+@media screen and (min-width: 375px) {
+  .u_sm-dn {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u_md-dn {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1088px) {
+  .u_lg-dn {
+    display: none;
+  }
+}
+
 /* ---------- layout ---------- */
 .l_container-sm,
 .l_container,
@@ -1364,6 +1382,138 @@ img {
 
 
 /* ---------- top_company ---------- */
+.top_company_desc {
+  margin-top: 80px;
+}
+
+.top_company_scroll-desc {
+  margin-top: 16px;
+}
+
+.top_company_menu-wrapper {
+  margin-top: 64px;
+
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.top_company_menu_list {
+  width: calc(343px * 2 + 40px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 0 auto;
+}
+
+.top_company-title {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--main-color);
+  position: relative;
+}
+
+.top_company-title::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 30%;
+  width: 70%;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+.top_company-title_txt {
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .top_company-title_txt {
+    font-size: 24px;
+  }
+}
+
+.top_company_menu-desc {
+  margin-top: 24px;
+}
+
+.top-company_btn-wrapper {
+  margin: 24px auto 0;
+  width: 343px;
+  height: 64px;
+}
+
+.top-company_btn-wrapper .m_btn {
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+.top-company_btn-wrapper .m_btn__right-arrow {
+  background-color: var(--base-color);
+}
+
+
+.m_btn__right-arrow:hover .m_arrow-wrapper {
+  transform: translateX(5px);
+}
+
+.top-company_btn-wrapper .m_btn__right-arrow .m_arrow {
+  border-top: 2px solid var(--accent-color);
+  border-right: 2px solid var(--accent-color);
+}
+
+.top-company_btn-wrapper .m_btn__right-arrow .m_arrow__round {
+  border: 2px solid var(--accent-color);
+}
+
+.top_company_btn_head {
+  display: flex;
+  /* align-items: center; */
+  gap: 16px;
+}
+
+.top_company_btn_icon-wrapper {
+  width: 24px;
+  height: 24px;
+}
+
+.top_company_btn_icon {
+  color: var(--accent-color);
+}
+
+.top_company_scroll {
+  /* position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%); */
+  /* top_kv-innerのposition:relativeを基準に下から40px、左右は中央寄せ */
+  margin: 40px auto 0;
+}
+
+.top_company_scroll_txt {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--accent-color);
+  text-align: center;
+  /* scrollの文字を中央寄せ */
+}
+
+.top_company_scroll_arrow {
+  width: 40px;
+  height: 40px; 
+  border: 1px solid var(--accent-color);
+  border-radius: 50%;
+  color: var(--accent-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 上下左右中央寄せ3点セット⇒丸の中の矢印 */
+
+  margin: 8px auto 0;
+  /* margin-top8pxと左右中央寄せ⇒top_kv-scroll_arrow全体 */
+}
 
 
 /* ---------- top_access ---------- */

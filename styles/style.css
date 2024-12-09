@@ -795,7 +795,11 @@ img {
   height: 320px;
   /* 高さ指定 */
 
-  background: url(../images/kv-img-960px.jpg) center 40% / cover;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.2), /* 上部の暗さ */
+    rgba(0, 0, 0, 0.2)
+  ),
+  url(../images/m_kv-img.jpg) center 55% / cover;
 
   position: relative;
   /* SP時のm_kv_boxの位置指定のための基準 */
@@ -1259,25 +1263,40 @@ img {
   height: calc(100vh);
   max-height: 1000px;
   padding-top: 72px;
-  background: 
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.2), /* 上部の暗さ */
+    rgba(0, 0, 0, 0.2)
+  ),
   url(../images/kv-img-960px.jpg) center / cover;
 }
 
 @media (min-width: 768px) {
   .top_kv {
-    background: url("../images/kv-img-1536px.jpg") center / cover;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.2), /* 上部の暗さ */
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("../images/kv-img-1536px.jpg") center / cover;
   }
 }
 
 @media (min-width: 1088px) {
   .top_kv {
-    background: url("../images/kv-img-1280px.jpg") center / cover;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.2), /* 上部の暗さ */
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("../images/kv-img-1280px.jpg") center / cover;
   }
 }
 
 @media (min-width: 1440px) {
   .top_kv {
-    background: url("../images/kv-img-1920px.jpg") center / cover;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.2), /* 上部の暗さ */
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("../images/kv-img-1920px.jpg") center / cover;
   }
 }
 

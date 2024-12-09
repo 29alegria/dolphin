@@ -1568,8 +1568,16 @@ img {
   margin-top: 80px;
 }
 
+.top_access_desc {
+  text-align: center;
+}
+
+.top_access_contents {
+  margin-top: 64px;
+}
+
 @media screen and (min-width: 768px) {
-  .top_access-inner {
+  .top_access_contents {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -1581,23 +1589,6 @@ img {
     width: 35%;
   }
 }
-
-/* .top_access_head {
-  font-size: 22px;
-  font-weight: bold;
-  position: relative;
-  padding-left: 20px;
-}
-
-.top_access_head::before {
-  content: "";
-  width: 4px;
-  height: 100%;
-  background: var(--main-color);
-  position: absolute;
-  top: 0;
-  left: 0;
-} */
 
 .top_access-title {
   border-bottom-width: 3px;

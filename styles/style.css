@@ -1465,7 +1465,8 @@ img {
   width: 340px;
   aspect-ratio: 16 / 9; /* アスペクト比を統一 */
   margin: 0 auto;
-  overflow: hidden; /* 必要なら画像がはみ出ないようにする */
+  /* overflow: hidden; */
+  position: relative;
 }
 
 @media screen and (min-width: 768px) {
@@ -1473,6 +1474,29 @@ img {
     flex-shrink: 0;
     width: 50%;
     aspect-ratio: 16 / 9; /* PCでも同じアスペクト比を維持 */
+  }
+}
+
+.top_service_content-box_img-wrapper::after {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--main-color);
+  position: absolute;
+  top: 80%;
+  right: 10%;
+}
+
+.top_service_content-box_img-wrapper__road::after {
+  content: "01";
+}
+
+.top_service_content-box_img-wrapper__event::after {
+  content: "02";
+}
+
+@media screen and (min-width: 768px) {
+  .top_service_content-box_img-wrapper::after {
+    display: none;
   }
 }
 
@@ -1487,41 +1511,25 @@ img {
   position: relative;
 }
 
-.top_service_content::after {
-  font-size: 40px;
-  font-weight: bold;
-  color: var(--main-color);
-  position: absolute;
-  top: -30%;
-  right: 15%;
-}
-
-@media screen and (min-width: 512px) {
-  .top_service_content::after {
-    right: 20%;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .top_service_content::after {
-    right: 25%;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .top_service_content::after {
+    font-weight: bold;
+    color: var(--main-color);
+    position: absolute;
     top: -35%;
     right: 5%;
     font-size: 48px;
   }
 }
 
-.top_service_content__road::after {
-  content: "01";
-}
-
-.top_service_content__event::after {
-  content: "02";
+@media screen and (min-width: 768px) {
+  .top_service_content__road::after {
+    content: "01";
+  }
+  
+  .top_service_content__event::after {
+    content: "02";
+  }
 }
 
 

@@ -789,6 +789,91 @@ img {
   color: var(--base-color);
 }
 
+/* ---------- m_kv ----------- */
+.m_kv {
+  padding-top: 72px;
+  height: 320px;
+  /* 高さ指定 */
+
+  background: linear-gradient(
+    rgba(51, 51, 51, 0.4), 
+    rgba(51, 51, 51, 0.4)),
+    url(../img/corporate/bg_kv.jpg) center 22% / cover;
+
+  position: relative;
+  /* SP時のm_kv_boxの位置指定のための基準 */
+}
+
+@media screen and (min-width: 1088px) {
+  .m_kv {
+    padding-top: 80px;
+  }
+}
+
+@media screen and (min-width: 1088px) {
+  .m_kv-inner {
+    position: relative;
+    /* PC時のm_kv_boxの位置指定のための基準
+    下記のPC時の配置の変更を行ったとき、m_kvが基準のままだと横に広がり過ぎるため、
+    m_kv-innerとともに付与したl_container-lgの幅を最大幅として、
+    そこを基準にm_kv_boxのPC時の配置を適用させる */
+    height: 100%;
+    /* position:relative;によってheightが効かなくなるためheight:100% */
+  }
+}
+
+.m_kv-box {
+  /* SP時の配置 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* 上下左右中央配置 */
+
+  text-align: center;
+  /* h1,pを中央寄せ */
+  width: 80%;
+  /* 親要素（m_kv-inner l_container-lg）の横幅の80%にする */
+}
+
+@media screen and (min-width: 1088px) {
+  .m_kv-box {
+    top: 30%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* PC時の配置 */
+  .m_kv-box {
+    left: 16px;
+    top: 30%;
+    transform: translateX(0);
+    /* left50%を16pxに変更、translateの微調整も解除 */
+    text-align: left;
+    /* 中央寄せから左寄寄せに変更 */
+  }
+}
+
+.m_kv-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--white-color);
+  text-shadow: 2px 2px 2px rgba(170, 170, 170, 0.16);
+}
+
+@media screen and (min-width: 1088px) {
+  .m_kv-title {
+    font-size: 32px;
+  }
+}
+
+.m_kv-title_sub {
+  font-weight: bold;
+  color: var(--white-color);
+  margin-top: 16px;
+  /* タイトルとdescの上下余白 */
+}
+
 /* ---------- page-top ---------- */
 .m_page-top {
   /* 矢印を囲う枠 */

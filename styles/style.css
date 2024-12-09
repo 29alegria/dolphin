@@ -1531,11 +1531,11 @@ img {
 
 @media screen and (min-width: 768px) {
   .top_access_content-box {
-    width: 38%;
+    width: 35%;
   }
 }
 
-.top_access_head {
+/* .top_access_head {
   font-size: 22px;
   font-weight: bold;
   position: relative;
@@ -1550,6 +1550,35 @@ img {
   position: absolute;
   top: 0;
   left: 0;
+} */
+
+.top_access-title {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--main-color);
+  position: relative;
+}
+
+.top_access-title::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 30%;
+  width: 70%;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+.top_access-title_txt {
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .top_access-title_txt {
+    font-size: 24px;
+  }
 }
 
 .top_access_address {

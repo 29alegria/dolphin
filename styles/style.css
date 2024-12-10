@@ -2042,6 +2042,63 @@ iframe {
 }
 
 /* ---------- training ----------- */
+.training_desc {
+  font-weight: bold;
+  margin-top: 64px;
+}
+
+.training_info-box {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .training_info-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .training_info_img-wrapper {
+    width: 50%;
+    flex-shrink: 0;
+  }
+}
+
+.training_info_content {
+  margin-top: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .training_info_content {
+    margin-top: 0;
+    width: 45%;
+  }
+}
+
+.training_info-title {
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  padding-left: 16px;
+}
+
+.training_info-title::before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  background-color: var(--main-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.training_info-txt {
+  margin-top: 16px;
+}
+
 /* ---------- philosophy ----------- */
 /* ---------- recruit ----------- */
 /* ---------- contact ----------- */

@@ -1989,7 +1989,11 @@ iframe {
 }
 
 /* ---------- history ----------- */
-.history_info-box {
+.history_info-boxes {
+  margin-top: 64px;
+}
+
+.history_info-box:not(:first-child) {
   margin-top: 40px;
 }
 
@@ -2004,7 +2008,7 @@ iframe {
   font-size: 16px;
   line-height: 1.6;
   color: var(--black-color);
-  margin-top: 24px;
+  margin-top: 16px;
 }
 
 .history-info th,

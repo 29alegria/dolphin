@@ -2152,6 +2152,321 @@ iframe {
 /* ---------- recruit ----------- */
 /* ---------- contact ----------- */
 /* ---------- blog ----------- */
+@media screen and (min-width: 960px) {
+  .l_contents-warp {
+    display: flex;
+    gap: 32px;
+  }
+}
+
+.m_post {
+  box-shadow: 2px 2px 4px rgba(170, 170, 170, 0.16);
+}
+
+.m_post:not(:first-child) {
+  margin-top: 24px;
+  /* 最初の記事以外の上余白で記事同士の上下余白 */
+}
+
+@media screen and (min-width: 768px) {
+  .m_post_link {
+    display: flex;
+    /* サムネイルとコンテンツを横並び */
+  }
+}
+
+.m_post_thumb-wrapper {
+  overflow: hidden;
+  /* ホバー時にスケールした際、サムネルの大きさは変わらずに拡大する */
+}
+
+@media screen and (min-width: 768px) {
+  .m_post_thumb-wrapper {
+    width: 272px;
+    /* サムネイルの幅 */
+    flex-shrink: 0;
+    /* フレックスアイテムが親コンテナー内でどの程度縮小できるかを制御します。
+    この値が 0 の場合、フレックスアイテムは必要な空間よりも小さくならず、
+    縮小されません。つまり、この設定を使用すると、アイテムは元のサイズよりも小さくなることはありません。 */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .m_post_thumb {
+    transition: transform 0.36s;
+    /* スケールにかかる時間 */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .m_post:hover .m_post_thumb {
+    transform: scale(1.06);
+    /* m_post（記事全体）をホバーしたら、サムネイルがスケール */
+  }
+}
+
+.m_post_content {
+  padding: 24px 16px;
+  /* 記事のコンテンツ部分全体の上下左右余白 */
+}
+
+@media screen and (min-width: 768px) {
+  .m_post_content {
+    padding: 8px 32px;
+    /* 記事のコンテンツ部分全体の上下左右余白 */
+  }
+}
+
+.m_post_title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 16px;
+  /* metaとの上下余白 */
+}
+
+@media screen and (min-width: 768px) {
+  .m_post_title {
+    font-size: 20px;
+  }
+}
+
+.m_post_meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* timeとcatを横並び＆両端揃え＆上下中央揃え */
+}
+
+.m_post_meta-date {
+  color: var(--gray-color);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.m_post_meta-cat {
+  color: var(--main-color);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 枠内でcatの文字が上下左右中央寄せ */
+  border: 1px solid var(--main-color);
+  border-radius: 4px;
+}
+
+.m_pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 56px;
+  gap: 8px;
+}
+
+.m_pagination_numbers {
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--gray);
+  background: var(--white-color);
+}
+
+.m_pagination_numbers__current {
+  color: var(--white-color);
+  border-color: var(--main-color);
+  background: var(--main-color);
+}
+
+.m_pagination_numbers__between {
+  font-size: 14px;
+  border: none;
+}
+
+.m_pagination_numbers__next {
+  position: relative;
+}
+
+.m_pagination_numbers__next::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid var(--black-color);
+  border-right: 1px solid var(--black-color);
+  position: absolute;
+  top: 50%;
+  left: 32%;
+  /* relativeを基準にabsoluteで指定したtopとleftの位置に配置する。
+  positionとtransform・translateを使って上下左右中央寄せすることが可能。
+  {
+  position: absolute;
+  top: 50%;要素の左上を起点に上から半分の50%の位置
+  left: 50%;要素の左上を起点に左から半分の50％の位置⇒要素の左上が上下左右中央の中心位置にくる。そのため、要素の中央を中心位置にさせるためにtransform: translateを使用。
+  transform: translate(-50%,-50%);要素がX（横方向）に―50%（要素のwidthの半分）移動、さらにY（縦方向）に―50%（要素のheightの半分）移動
+  }
+  しかし今回は回転させた矢印のため上下中央寄せのみ。
+  {
+  position: absolute;
+  top: 50%;要素の左上を起点に上から半分の50%の位置
+  left: 32%;目分量
+  transform: translateY(-50%) rotate(45deg);X方向（横方向）はleftで目分量調整しているためtranslateXは要らない。
+  }
+  */
+
+  transform: translateY(-50%) rotate(45deg);
+  /* 要素変形
+  translate⇒Xは横（＋は右、－は左）、Yは縦（＋は下、－は上）
+  rotate⇒回転 */
+}
+
+.m_sidebar {
+  margin-top: 80px;
+  /* SP時の縦並びのmainとの上下余白 */
+}
+
+@media screen and (min-width: 960px) {
+  .m_sidebar {
+    width: 320px;
+    /* 幅指定 */
+    margin-top: 0;
+    /* PC時の横並びのmainとの上下余白は0 */
+    flex-shrink: 0;
+  }
+}
+
+.m_sidebar-box_head {
+  background: var(--main-color);
+  padding: 16px;
+  /* 青枠内の余白 */
+}
+
+.m_sidebar-box_head-txt {
+  font-weight: bold;
+  color: var(--white-color);
+}
+
+.m_sidebar-box_contents {
+  margin-top: 40px;
+  /* head（カテゴリー＆新着記事）とcontentsの上下余白 */
+}
+
+.m_sidebar-post {
+  box-shadow: 2px 2px 4px rgba(170, 170, 170, 0.16);
+  min-height: 150px;
+  /* これ以上は小さくならない */
+}
+
+.m_sidebar-post:not(:first-child) {
+  margin-top: 24px;
+  /* 最初以外のpostの上余白でpost同士の上下余白 */
+}
+
+@media screen and (min-width: 600px) {
+  .m_sidebar-post_link {
+    display: flex;
+  }
+}
+
+.m_sidebar-post_thumb-wrapper {
+  overflow: hidden;
+  /* ホバー時にスケールした際、サムネルの大きさは変わらずに拡大する */
+}
+
+@media screen and (max-width: 600px), screen and (min-width: 960px) {
+  .m_sidebar-post_thumb-wrapper{
+    display: none; /* 非表示にする */
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .m_sidebar-post_thumb-wrapper {
+    width: 272px;
+    /* サムネイルの幅 */
+    flex-shrink: 0;
+    /* フレックスアイテムが親コンテナー内でどの程度縮小できるかを制御します。
+    この値が 0 の場合、フレックスアイテムは必要な空間よりも小さくならず、
+    縮小されません。つまり、この設定を使用すると、アイテムは元のサイズよりも小さくなることはありません。 */
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .m_sidebar-post_thumb {
+    transition: transform 0.36s;
+    /* スケールにかかる時間 */
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .m_sidebar-post:hover .m_sidebar-post_thumb {
+    transform: scale(1.06);
+    /* m_post（記事全体）をホバーしたら、サムネイルがスケール */
+  }
+}
+
+
+
+.m_sidebar-post_content {
+  padding: 8px 16px;
+  /* 記事の内容全体の上下左右余白 */
+  width: 100%;
+  height: 100%;
+}
+
+.m_sidebar-post_title {
+  font-weight: bold;
+  margin-top: 16px;
+  /* metaとの上下余白 */
+  line-height: 2.2;
+
+}
+
+.m_sidebar-post_meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* timeとcatを横並び＆両端揃え＆上下中央揃え */
+}
+
+.m_sidebar-post_meta-date {
+  color: var(--gray-color);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.m_sidebar-post_meta-cat {
+  color: var(--main-color);
+  font-size: 12px;
+  font-weight: bold;
+  width: 112px;
+  height: 24px;
+  /* 幅と高さ */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 枠内でcatの文字が上下左右中央寄せ */
+  border: 1px solid var(--main-color);
+  border-radius: 4px;
+}
+
+.m_cta__recruit__sidebar {
+  display: none;
+}
+
+@media screen and (min-width: 960px) {
+  .m_cta__recruit__sidebar {
+    margin-top: 40px;
+    display: block;
+    position: sticky;
+    top: 80px;
+    left: 0;
+  }
+}
+
 /* ---------- privacy ----------- */
 /* ---------- single-blog ----------- */
 /* ---------- entry ----------- */

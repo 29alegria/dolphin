@@ -1790,7 +1790,7 @@ iframe {
 .service_content {
   background: var(--white-color);
   padding: 40px 16px;
-  margin: 80px auto 0;
+  margin: 80px auto;
   max-width: var(--content-width-sm);
 }
 

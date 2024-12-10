@@ -1711,8 +1711,10 @@ img {
   margin-top: 80px;
 }
 
-.top_access_desc {
-  text-align: center;
+@media screen and (min-width: 1088px) {
+  .top_access_desc {
+    text-align: center;
+  }
 }
 
 .top_access_contents {

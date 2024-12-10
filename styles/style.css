@@ -1989,6 +1989,54 @@ iframe {
 }
 
 /* ---------- history ----------- */
+.history_info-box {
+  margin-top: 40px;
+}
+
+.history_title {
+  font-weight: bold;
+}
+
+.history-info {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--black-color);
+  margin-top: 24px;
+}
+
+.history-info th,
+.history-info td {
+  border: 1px solid #ddd; /* 罫線 */
+  padding: 16px 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .history-info th,
+  .history-info td {
+    padding: 16px;
+  }
+}
+
+.history-info th {
+  background-color: var(--accent-color); /* ヘッダーの背景色 */
+  color: var(--white-color); /* ヘッダーの文字色 */
+  text-align: left; /* 左揃え */
+  width: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  .history-info th {
+      width: 15%;/* 幅の調整 */
+  }
+}
+
+.history-info td {
+  background-color: var(--base-color); /* 偶数行の背景色 */
+}
+
 /* ---------- training ----------- */
 /* ---------- philosophy ----------- */
 /* ---------- recruit ----------- */

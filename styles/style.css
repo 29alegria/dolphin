@@ -1239,12 +1239,6 @@ img {
   font-weight: bold;
 }
 
-.top-blog_btn-wrapper {
-  max-width: 343px;
-  height: 64px;
-  margin: 80px auto 0;
-}
-
 /* ---------- top-kv ---------- */
 .top_kv {
   height: calc(100vh);
@@ -1784,3 +1778,22 @@ iframe {
 }
 
 /* ---------- top_blog ---------- */
+.top-blog_btn-wrapper {
+  max-width: 343px;
+  height: 64px;
+  margin: 80px auto 0;
+}
+
+
+/* ---------- service ----------- */
+/* ---------- about ----------- */
+/* ---------- history ----------- */
+/* ---------- training ----------- */
+/* ---------- philosophy ----------- */
+/* ---------- recruit ----------- */
+/* ---------- contact ----------- */
+/* ---------- blog ----------- */
+/* ---------- privacy ----------- */
+/* ---------- single-blog ----------- */
+/* ---------- entry ----------- */
+/* ---------- 404 ----------- */

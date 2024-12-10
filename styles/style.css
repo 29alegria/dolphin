@@ -914,6 +914,36 @@ img {
   right: -120px;⇒24pxに */
 }
 
+/* ----------　m-section-title ----------*/
+.m_section-title {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--main-color);
+  position: relative;
+}
+
+.m_section-title::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 30%;
+  width: 70%;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+.m_section-title_txt {
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .m_section-title_txt {
+    font-size: 24px;
+  }
+}
+
 /* ---------- m_arrow ---------- */
 .m_arrow {
   width: 8px;
@@ -1893,6 +1923,71 @@ iframe {
 
 
 /* ---------- about ----------- */
+.about-info {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--black-color);
+  margin-top: 40px;
+}
+
+.about-info th,
+.about-info td {
+  border: 1px solid #ddd; /* 罫線 */
+  padding: 16px 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-info th,
+  .about-info td {
+    padding: 16px;
+  }
+}
+
+.about-info th {
+  background-color: var(--accent-color); /* ヘッダーの背景色 */
+  color: var(--white-color); /* ヘッダーの文字色 */
+  text-align: left; /* 左揃え */
+}
+
+@media screen and (min-width: 768px) {
+  .about-info th {
+      width: 25%;/* 幅の調整 */
+  }
+}
+
+.about-info td {
+  background-color: var(--base-color); /* 偶数行の背景色 */
+}
+
+.about-info a {
+  color: var(--main-color);
+  text-decoration: none;
+  display: flex;
+  gap: 16px;
+}
+
+.about-info a:hover {
+  text-decoration: underline;
+}
+
+.about-info-link_icon-wrapper {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.about-info a:hover .about-info-link_icon-wrapper{
+  transform: translateY(2px);
+}
+
+.partner_section-title_sub {
+  font-size: 16px;
+  font-weight: normal;
+}
+
 /* ---------- history ----------- */
 /* ---------- training ----------- */
 /* ---------- philosophy ----------- */

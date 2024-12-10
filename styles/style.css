@@ -225,7 +225,6 @@ img {
   gap: 8px;
 }
 
-
 .l_header-nav_link:hover .m_arrow-wrapper {
   transform: translateX(5px);
 }
@@ -233,7 +232,6 @@ img {
 .l_header-nav_item:nth-child(3n) .l_header-nav_link:hover .m_arrow-wrapper {
   transform: translateY(5px);
 }
-
 
 .l_header-nav_head {
   font-weight: bold;
@@ -759,7 +757,6 @@ img {
 }
 
 
-
 .l_footer-menu_lowlayer-page-submenu-item:not(:first-child) {
   margin-top: 16px;
 }
@@ -794,13 +791,11 @@ img {
   padding-top: 72px;
   height: 320px;
   /* 高さ指定 */
-
   background: linear-gradient(
     rgba(0, 0, 0, 0.2), /* 上部の暗さ */
     rgba(0, 0, 0, 0.2)
   ),
   url(../images/m_kv-img.jpg) center 55% / cover;
-
   position: relative;
   /* SP時のm_kv_boxの位置指定のための基準 */
 }
@@ -831,7 +826,6 @@ img {
   left: 50%;
   transform: translateX(-50%);
   /* 上下左右中央配置 */
-
   text-align: center;
   /* h1,pを中央寄せ */
   width: 80%;
@@ -881,13 +875,11 @@ img {
   width: 48px;
   height: 48px;
   border-radius: 100vh;
-
   position: fixed;
   bottom: 24px;
   right: -120px;
   /* bottom: 24px;およびright: -120px;により、画面の右下に固定されますが、
   初期状態では画面外に位置しています（-120px右に移動しています */
-
   background: var(--main-color);
   opacity: 0.5;
   transition: 0.5s;
@@ -901,7 +893,6 @@ img {
   width: 50%;
   height: 50%;
   /* 親要素の50％のサイズ */
-
   position: absolute;
   top: 50%;
   left: 50%;
@@ -928,7 +919,6 @@ img {
   height: 8px;
   border-top: 2px solid var(--accent-color);
   border-right: 2px solid var(--accent-color);
-  
   /* 追加 */
   transition: transform 0.3s ease;
 }
@@ -1028,7 +1018,6 @@ img {
   border: 2px solid var(--base-color);
 }
 
-
 /* ---------- m_cta_form ---------- */
 .m_cta__form {
   padding: 80px 0;
@@ -1126,7 +1115,6 @@ img {
     margin: 40px 0 0 auto;
   }
 }
-
 
 /* ---------- m_recruit-cta ---------- */
 .m_cta__recruit {
@@ -1318,10 +1306,8 @@ img {
   left: 50%;
   transform: translateX(-50%);
   /* kvのなかでbox全体を上下左右中央寄せ */
-
   text-align: center;
   /* ボックス内のテキストを中央寄せ */
-
   width: 100%;
   /* ブロック要素はデフォルトでは親要素の幅いっぱいに広がります
   しかしdivタグはデフォルトでは親要素の幅いっぱいに広がりません。
@@ -1532,7 +1518,6 @@ img {
   }
 }
 
-
 @media screen and (min-width: 768px) {
   .top_service_content {
     margin-top: 0;
@@ -1563,8 +1548,7 @@ img {
   height: 64px;
 }
 
-
-/* ---------- top_company ---------- */
+/* ---------- top_company　---------- */
 .top_company_desc {
   margin-top: 80px;
 }
@@ -1636,7 +1620,6 @@ img {
   background-color: var(--base-color);
 }
 
-
 .m_btn__right-arrow:hover .m_arrow-wrapper {
   transform: translateX(5px);
 }
@@ -1697,7 +1680,6 @@ img {
   margin: 8px auto 0;
   /* margin-top8pxと左右中央寄せ⇒top_kv-scroll_arrow全体 */
 }
-
 
 /* ---------- top_access ---------- */
 .top_access-inner {

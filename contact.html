@@ -203,6 +203,11 @@
     </button>
   </header>
 
+  <button class="m_page-top js_page-top">
+    <img src="./images/up-icon.svg" alt="ページ上部に移動する" class="m_page-top_img" />
+  </button>
+  <!-- /.m_page-top -->
+
   <div class="m_kv" id="top">
     <div class="m_kv-inner l_container-lg">
       <div class="m_kv-box">
@@ -238,8 +243,8 @@
               <span class="contact_form_required">必須</span>
             </dt>
             <dd class="contact_form_detail">
-              <input type="text" class="contact_form_input" />
-            </dd>
+              <input type="text" id="name" class="contact_form_input" />
+              <p class="contact_form_error-message" id="name_error"></p>            </dd>
             <dt class="contact_form_heading">
               お名前 (フリガナ)<span class="contact_form_example"
                 >例.ヤマダタロウ</span
@@ -247,15 +252,15 @@
               <span class="contact_form_required">必須</span>
             </dt>
             <dd class="contact_form_detail">
-              <input type="text" class="contact_form_input" />
-            </dd>
+              <input type="text" id="name-kana" class="contact_form_input" />
+              <p class="contact_form_error-message" id="name-kana_error"></p>            </dd>
             <dt class="contact_form_heading">
               電話番号<span class="contact_form_example">例.0312345678</span>
               <span class="contact_form_required">必須</span>
             </dt>
             <dd class="contact_form_detail">
-              <input type="tel" class="contact_form_input" />
-            </dd>
+              <input type="tel" id="tel" class="contact_form_input" />
+              <p class="contact_form_error-message" id="tel_error"></p>            </dd>
             <dt class="contact_form_heading">
               メールアドレス<span class="contact_form_example"
                 >例.info@sample.com</span
@@ -263,8 +268,8 @@
               <span class="contact_form_required">必須</span>
             </dt>
             <dd class="contact_form_detail">
-              <input type="email" class="contact_form_input" />
-            </dd>
+              <input type="email" id="mail" class="contact_form_input" />
+              <p class="contact_form_error-message" id="mail_error"></p>            </dd>
 
             <dt class="contact_form_heading">
               お問い合わせ項目
@@ -310,7 +315,10 @@
               <textarea
                 class="contact_form_textarea"
                 placeholder="ご自由にご記入ください。"
+                id="textarea"
               ></textarea>
+              <p class="contact_form_error-message" id="textarea_error"></p>
+
           </dl>
 
           <div class="contact_form_privacy-wrapper">
@@ -332,22 +340,9 @@
             に同意する
           </div>
           <!-- /.contact_form_privacy-wrapper -->
+          <p class="privacy-error-message" style="display: none; color: red; font-size: 12px; margin-top: 8px;">プライバシーポリシーに同意してください。</p>
 
-          <!-- <div class="contact_btn-wrapper">
-            <div href="" class="m_btn m_btn__right-arrow">
-              <input 
-              type="submit"
-              class="m_btn_input btn_head"
-              value="この内容で送信する"
-              >
-              <div class="m_arrow-wrapper">
-                <div class="m_arrow__round">
-                  <div class="m_arrow m_arrow__right"></div>
-                </div>            
-              </div>
-            </div>
-          </div> -->
-          <!-- /.contact_btn-wrapper -->
+
           
           <div class="contact_btn-wrapper">
             <div href="" class="m_btn m_btn__right-arrow">

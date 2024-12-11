@@ -2590,12 +2590,20 @@ iframe {
   transition: transform 0.3s ease;
 }
 
+.privacy-error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 8px;
+  text-align: center;
+  display: none; /* 初期状態では非表示 */
+}
+
 /* チェックボックスデザイン
 input[type="checkbox"] セレクターを使って全てのチェックボックスに適用されるスタイルを定義
 ⇒今回はプライバシーポリシーのチェックボックス */
 input[type="checkbox"] {
   cursor: pointer;/* ユーザーにクリッカブルな要素であることを示します。 */
-  padding-left: 30px;/*label手前にチェックボックス用の余白を開ける。今回はチェックボックスと「プライバシーポリシー」の左右余白*/
+  padding-left: 40px;/*label手前にチェックボックス用の余白を開ける。今回はチェックボックスと「プライバシーポリシー」の左右余白*/
   vertical-align: middle;/* チェックボックスを垂直方向に中央揃え */
   position: relative;
 }
@@ -2672,7 +2680,63 @@ input[type="checkbox"]:checked::after {
   cursor: pointer;
 }
 
+.contact_form_error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: none; /* 初期状態では非表示にする */
+}
+
+
 /* ---------- entry ----------- */
+.entry_form_detail {
+  margin-top: 16px;
+  padding: 16px;
+}
+
+.entry_form_group {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.entry_form_label {
+  display: block;
+  width: 90px;
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.entry_form_input {
+  width: 250px;
+  height: 40px;
+  padding: 8px;
+  margin-bottom: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.entry_form_group:first-child .entry_form_input {
+  width: 150px;
+}
+
+.entry_form_button {
+  margin-top: 4px;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 8px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.entry_form_button:hover {
+  opacity: 0.8;
+}
 
 
 /* ---------- privacy ----------- */

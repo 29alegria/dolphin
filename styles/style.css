@@ -518,7 +518,7 @@ img {
 
 /* ---------- l_footer ---------- */
 .l_footer {
-  background-color: var(--base-color);
+  background-color: var(--white-color);
 }
 
 .l_footer_info {
@@ -2468,6 +2468,261 @@ iframe {
 /* ---------- single-blog ----------- */
 
 /* ---------- recruit ----------- */
+.recruit_desc {
+  margin-top: 40px;
+}
+
+.recruit_btn-wrapper {
+  height: 64px;
+  width: 343px;
+  margin: 64px 0 auto 0;
+}
+
+.recruit_requirement_box {
+  margin-top: 80px;
+}
+
+.recruit_requirement_head {
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  padding-left: 16px;
+}
+
+.recruit_requirement_head::before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  background: var(--main-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.recruit-info {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--black-color);
+  margin-top: 64px;
+}
+
+.recruit-info th,
+.recruit-info td {
+  border: 1px solid #ddd; /* 罫線 */
+  padding: 16px 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .recruit-info th,
+  .recruit-info td {
+    padding: 16px;
+  }
+}
+
+.recruit-info th {
+  background-color: var(--accent-color); /* ヘッダーの背景色 */
+  color: var(--white-color); /* ヘッダーの文字色 */
+  text-align: left; /* 左揃え */
+  width: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  .recruit-info th {
+      width: 15%;/* 幅の調整 */
+  }
+}
+
+.recruit-info td {
+  background-color: var(--base-color); /* 偶数行の背景色 */
+}
+
+.recruit_entry_boxes {
+  margin-top: 64px;
+}
+
+@media screen and (min-width: 768px) {
+  .recruit_entry_boxes {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
+}
+
+.recruit_entry_box {
+  background-color: var(--white-color);
+  padding: 16px;
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .recruit_entry_box {
+    width: calc((100% - 48px) / 3);
+  }
+}
+
+.recruit_entry_box:not(:first-child) {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .recruit_entry_box:not(:first-child) {
+    margin-top: 0px;
+  }
+}
+
+.recruit_entry_head {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .recruit_entry_head {
+    display: block;
+  }
+}
+
+.recruit_entry_head_txt {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .recruit_entry_head_txt {
+    margin-top: 16px;
+  }
+}
+
+.recruit_entry_head-number {
+  font-weight: bold;
+  position: relative;
+
+}
+
+.recruit_entry_head-number::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -90%;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  font-weight: bold;
+  background-color: var(--base-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100vh;
+}
+
+.recruit_entry_head-number__first::before {
+  content: "1";
+}
+
+.recruit_entry_head-number__second::before {
+  content: "2";
+}
+
+.recruit_entry_head-number__third::before {
+  content: "3";
+}
+
+.recruit_entry_desc {
+  margin-top: 16px;
+}
+
+.recruit_entry_tel {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.recruit_entry_tel-txt {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) and (max-width: 879px) {
+  .recruit_entry_tel-txt {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+.recruit_entry_tel-icon-wrapper {
+  width: 40px;
+  height: 40px;
+}
+
+.recruit_entry_btn-wrapper {
+  max-width: 343px;
+  height: 64px;
+  margin: 40px auto 0;
+}
+
+.recruit_contact_box {
+  background: var(--white-color);
+  padding: 16px;
+  margin-top: 64px;
+}
+
+.recruit_contact_txt {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 632px) {
+  .recruit_contact_txt {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .recruit_contact_info_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+.recruit_contact_info_box .m_form_btn-wrapper {
+  width: 100%;
+  max-width: 343px;
+}
+
+@media screen and (min-width: 768px) {
+  .recruit_contact_info_box .m_form_btn-wrapper {
+    width: 343px;
+    margin: 40px 0 0;
+  }
+}
+
+
+.recruit_contact_info__tel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.recruit_contact_info__tel-txt {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.recruit_contact_info__tel_img-wrapper {
+  width: 40px;
+  height: 40px;
+}
 
 /* ---------- contact ----------- */
 .contact_form {

@@ -2521,7 +2521,7 @@ iframe {
   margin-top: 40px;
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 768px) {
   .contact_form_radio-list {
     display: flex;
   }
@@ -2533,7 +2533,7 @@ iframe {
   margin-top: 40px;
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 768px) {
   .contact_form_radio-item {
     margin-top: 0;
     margin-right: 40px;

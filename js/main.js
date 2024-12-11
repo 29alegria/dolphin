@@ -185,8 +185,8 @@ pageTop.addEventListener("click", function() {
 }); 
 
 
-// エントリーフォーム住所
 
+// エントリーフォームの住所
 document.addEventListener('DOMContentLoaded', () => {
   const postalCodeInput = document.getElementById('postal-code');
   const prefectureSelect = document.getElementById('prefecture');
@@ -259,6 +259,7 @@ document.querySelector(".contact_form").addEventListener("submit", (event) => {
     nameError.style.display = "none"; // メッセージを非表示
   }
 
+
   const nameKanaInput = document.getElementById("name-kana");
   const nameKanaError = document.getElementById("name-kana_error");
 
@@ -271,6 +272,7 @@ document.querySelector(".contact_form").addEventListener("submit", (event) => {
     nameKanaError.style.display = "none"; // メッセージを非表示
   }
 
+
   const telInput = document.getElementById("tel");
   const telError = document.getElementById("tel_error");
 
@@ -282,6 +284,8 @@ document.querySelector(".contact_form").addEventListener("submit", (event) => {
     telError.textContent = ""; // メッセージをクリア
     telError.style.display = "none"; // メッセージを非表示
   }
+
+
   const mailInput = document.getElementById("mail");
   const mailError = document.getElementById("mail_error");
 
@@ -293,6 +297,22 @@ document.querySelector(".contact_form").addEventListener("submit", (event) => {
     mailError.textContent = ""; // メッセージをクリア
     mailError.style.display = "none"; // メッセージを非表示
   }
+
+  const radioButtons = document.querySelectorAll('input[name="content"]');
+  const radioErrorMessage = document.getElementById("radio_error");
+
+  // 選択状態の確認
+  const isSelected = Array.from(radioButtons).some(radio => radio.checked);
+
+  if (!isSelected) {
+    // エラーメッセージを表示
+    radioErrorMessage.style.display = "block";
+  } else {
+    // エラーメッセージを非表示
+    radioErrorMessage.style.display = "none";
+  }
+
+
   const textareaInput = document.getElementById("textarea");
   const textareaError = document.getElementById("textarea_error");
 

@@ -1432,8 +1432,14 @@ img {
   width: 340px;
   aspect-ratio: 16 / 9; /* アスペクト比を統一 */
   margin: 0 auto;
-  /* overflow: hidden; */
   position: relative;
+}
+
+@media (min-width: 500px) and (max-width: 767px) {
+  .top_service_content-box_img-wrapper {
+    width: 80%;
+    aspect-ratio: 16 / 9; /* アスペクト比を統一 */
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1451,6 +1457,12 @@ img {
   position: absolute;
   top: 80%;
   right: 10%;
+}
+
+@media screen and (min-width: 500px) {
+  .top_service_content-box_img-wrapper::after {
+    top: 88%;
+  }
 }
 
 .top_service_content-box_img-wrapper__road::after {

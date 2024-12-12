@@ -1202,7 +1202,7 @@ img {
 
 /* ---------- top-kv ---------- */
 .top_kv {
-  height: calc(100vh);
+  height: 100vh;
   max-height: 1000px;
   padding-top: 72px;
   background: linear-gradient(
@@ -1210,47 +1210,6 @@ img {
     rgba(0, 0, 0, 0.2)
   );
 }
-
-/* .top_kv {
-  height: calc(100vh);
-  max-height: 1000px;
-  padding-top: 72px;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.2), 
-    rgba(0, 0, 0, 0.2)
-  ),
-  url(../images/kv-img-960px.jpg) center / cover;
-}
-
-@media (min-width: 768px) {
-  .top_kv {
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.2), 
-      rgba(0, 0, 0, 0.2)
-    ),
-    url("../images/kv-img-1536px.jpg") center / cover;
-  }
-}
-
-@media (min-width: 1088px) {
-  .top_kv {
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.2), 
-      rgba(0, 0, 0, 0.2)
-    ),
-    url("../images/kv-img-1280px.jpg") center / cover;
-  }
-}
-
-@media (min-width: 1440px) {
-  .top_kv {
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.2), 
-      rgba(0, 0, 0, 0.2)
-    ),
-    url("../images/kv-img-1920px.jpg") center / cover;
-  }
-} */
 
 @media screen and (min-width: 1088px) {
   .top_kv {
@@ -1279,6 +1238,7 @@ img {
   親要素の幅いっぱいに広げるためには、明示的にwidth: 100%;などのスタイル指定が必要
   top_kv-innerの幅いっぱいに広がる⇒top_kv-innerはl_container-lgで最大幅も指定されているため
   PC時はその幅に合わせて位置変更される */
+  z-index: var(--z-index-page-top);
 }
 
 @media screen and (min-width: 768px) {
@@ -1337,6 +1297,7 @@ img {
   top: 90%;
   left: 50%;
   transform: translateX(-50%);
+  z-index: var(--z-index-page-top);
 }
 
 .top_kv_arrow .m_arrow__round {
@@ -1348,6 +1309,27 @@ img {
   border-right: 2px solid var(--base-color);
 }
 
+.top_kv-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 72px;
+  max-height: 1000px;
+}
+
+@media screen and (min-width: 1088px) {
+  .top_kv-slideshow {
+    padding-top: 80px;
+  }
+}
+
+.top_kv-slideshow_slide_img {
+  object-fit: cover;
+  height: 100%;
+  filter: brightness(0.8);
+}
 /* ---------- top-section-title ---------- */
 .top_section_title {
   text-align: center;

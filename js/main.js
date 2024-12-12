@@ -296,7 +296,7 @@ pageTop.addEventListener("click", function() {
 /*---------- top_kvスライドショー ----------*/
 
 const slideshow = new Swiper(".js_slideshow", {
-  speed: 1200,
+  speed: 3000,
   effect: "fade",
   pagination: {
     el: ".swiper-pagination_slideshow",
@@ -307,7 +307,7 @@ const slideshow = new Swiper(".js_slideshow", {
     prevEl: ".swiper-button-prev_slideshow",
   },
   autoplay: {
-    delay: 1600,
+    delay: 2000,
     disableOnInteraction: false,
   },
 });

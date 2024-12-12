@@ -914,6 +914,33 @@ img {
   right: -120px;⇒24pxに */
 }
 
+/* ---------- m_breadcrumb ---------- */
+.m_breadcrumb {
+  margin-top: 16px;
+}
+
+.m_breadcrumb ul {
+  display: flex;
+  gap: 24px;
+}
+
+.m_breadcrumb li {
+  display: flex;
+  gap: 16px;
+}
+
+.m_breadcrumb li:last-child {
+  color: var(--main-color);
+}
+
+.m_breadcrumb a {
+  color: var(--main-color);
+}
+
+.m_breadcrumb a:hover {
+  text-decoration: underline;
+}
+
 /* ----------　m-section-title ----------*/
 .m_section-title {
   border-bottom-width: 3px;

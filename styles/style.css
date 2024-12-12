@@ -1002,6 +1002,14 @@ img {
   left: 29%;
 }
 
+.m_arrow__round .m_arrow__bottom {
+  position: absolute;
+  top: 25%;
+  /* transform: translateY(-50%) rotate(135deg); */
+  transform: rotate(135deg);
+  left: 29%;
+}
+
 /* ---------- btn ---------- */
 /* divのwrapperでボタンの横幅、縦幅、上下余白を指定 */
 /* 共通 */
@@ -1392,6 +1400,22 @@ img {
   }
 }
 
+.top_kv_arrow {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.top_kv_arrow .m_arrow__round {
+  border: 2px solid var(--base-color);
+}
+
+.top_kv_arrow .m_arrow {
+  border-top: 2px solid var(--base-color);
+  border-right: 2px solid var(--base-color);
+}
+
 /* ---------- top-section-title ---------- */
 .top_section_title {
   text-align: center;
@@ -1574,6 +1598,11 @@ img {
 }
 
 /* ---------- top_company　---------- */
+.top_company {
+  background-color: var(--white-color);
+}
+
+
 .top_company_desc {
   margin-top: 80px;
 }

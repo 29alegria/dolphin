@@ -1206,7 +1206,17 @@ img {
   max-height: 1000px;
   padding-top: 72px;
   background: linear-gradient(
-    rgba(0, 0, 0, 0.2), /* 上部の暗さ */
+    rgba(0, 0, 0, 0.2), 
+    rgba(0, 0, 0, 0.2)
+  );
+}
+
+/* .top_kv {
+  height: calc(100vh);
+  max-height: 1000px;
+  padding-top: 72px;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.2), 
     rgba(0, 0, 0, 0.2)
   ),
   url(../images/kv-img-960px.jpg) center / cover;
@@ -1215,7 +1225,7 @@ img {
 @media (min-width: 768px) {
   .top_kv {
     background: linear-gradient(
-      rgba(0, 0, 0, 0.2), /* 上部の暗さ */
+      rgba(0, 0, 0, 0.2), 
       rgba(0, 0, 0, 0.2)
     ),
     url("../images/kv-img-1536px.jpg") center / cover;
@@ -1225,7 +1235,7 @@ img {
 @media (min-width: 1088px) {
   .top_kv {
     background: linear-gradient(
-      rgba(0, 0, 0, 0.2), /* 上部の暗さ */
+      rgba(0, 0, 0, 0.2), 
       rgba(0, 0, 0, 0.2)
     ),
     url("../images/kv-img-1280px.jpg") center / cover;
@@ -1235,14 +1245,14 @@ img {
 @media (min-width: 1440px) {
   .top_kv {
     background: linear-gradient(
-      rgba(0, 0, 0, 0.2), /* 上部の暗さ */
+      rgba(0, 0, 0, 0.2), 
       rgba(0, 0, 0, 0.2)
     ),
     url("../images/kv-img-1920px.jpg") center / cover;
   }
-}
+} */
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1088px) {
   .top_kv {
     padding-top: 80px;
   }

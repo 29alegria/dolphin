@@ -137,157 +137,177 @@ pageTop.addEventListener("click", function() {
 
 
 // エントリーフォームの住所
-document.addEventListener('DOMContentLoaded', () => {
-  const postalCodeInput = document.getElementById('postal-code');
-  const prefectureSelect = document.getElementById('prefecture');
-  const cityInput = document.getElementById('city');
-  const autoInputButton = document.querySelector('.entry_form_button');
+// document.addEventListener('DOMContentLoaded', () => {
+//   const postalCodeInput = document.getElementById('postal-code');
+//   const prefectureSelect = document.getElementById('prefecture');
+//   const cityInput = document.getElementById('city');
+//   const autoInputButton = document.querySelector('.entry_form_button');
 
-  autoInputButton.addEventListener('click', () => {
-    console.log('ボタンがクリックされました');
-  });
+//   autoInputButton.addEventListener('click', () => {
+//     console.log('ボタンがクリックされました');
+//   });
 
-  autoInputButton.addEventListener('click', async () => {
-    // 郵便番号の取得と整形
-    const postalCode = postalCodeInput.value.trim().replace(/[^\d]/g, '');
+//   autoInputButton.addEventListener('click', async () => {
+//     // 郵便番号の取得と整形
+//     const postalCode = postalCodeInput.value.trim().replace(/[^\d]/g, '');
 
-    // 郵便番号が7桁でない場合はエラー
-    if (postalCode.length !== 7) {
-      alert('郵便番号は7桁で入力してください。');
-      return;
-    }
+//     // 郵便番号が7桁でない場合はエラー
+//     if (postalCode.length !== 7) {
+//       alert('郵便番号は7桁で入力してください。');
+//       return;
+//     }
 
-    try {
-      // APIリクエスト
-      const response = await fetch(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${postalCode}`);
-      const data = await response.json();
+//     try {
+//       // APIリクエスト
+//       const response = await fetch(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${postalCode}`);
+//       const data = await response.json();
 
-      // 住所情報の取得と入力
-      if (data.results && data.results.length > 0) {
-        const result = data.results[0];
+//       // 住所情報の取得と入力
+//       if (data.results && data.results.length > 0) {
+//         const result = data.results[0];
         
-        // 都道府県の自動選択
-        const prefecture = result.address1;
-        const prefectureOption = Array.from(prefectureSelect.options).find(
-          option => option.text === prefecture
-        );
+//         // 都道府県の自動選択
+//         const prefecture = result.address1;
+//         const prefectureOption = Array.from(prefectureSelect.options).find(
+//           option => option.text === prefecture
+//         );
         
-        if (prefectureOption) {
-          prefectureSelect.value = prefectureOption.value;
-        } else {
-          alert(`都道府県「${prefecture}」が見つかりません。`);
-          return;
-        }
+//         if (prefectureOption) {
+//           prefectureSelect.value = prefectureOption.value;
+//         } else {
+//           alert(`都道府県「${prefecture}」が見つかりません。`);
+//           return;
+//         }
 
-        // 市区町村・番地の自動入力
-        cityInput.value = result.address2 + result.address3;
-      } else {
-        alert('該当する住所が見つかりませんでした。');
-      }
-    } catch (error) {
-      console.error('住所検索中にエラーが発生しました:', error);
-      alert('住所の取得に失敗しました。もう一度お試しください。');
-    }
-  });
-});
+//         // 市区町村・番地の自動入力
+//         cityInput.value = result.address2 + result.address3;
+//       } else {
+//         alert('該当する住所が見つかりませんでした。');
+//       }
+//     } catch (error) {
+//       console.error('住所検索中にエラーが発生しました:', error);
+//       alert('住所の取得に失敗しました。もう一度お試しください。');
+//     }
+//   });
+// });
 
 
-// フォーム全体エラー管理
-document.querySelector(".contact_form").addEventListener("submit", (event) => {
-  event.preventDefault();
+// // フォーム全体エラー管理
+// document.querySelector(".contact_form").addEventListener("submit", (event) => {
+//   event.preventDefault();
   
-  // 入力フィールドを取得
-  const nameInput = document.getElementById("name");
-  const nameError = document.getElementById("name_error");
+//   // 入力フィールドを取得
+//   const nameInput = document.getElementById("name");
+//   const nameError = document.getElementById("name_error");
 
-  // 名前の必須チェック
-  if (!nameInput.value.trim()) {
-    nameError.textContent = "お名前を入力してください。"; // エラーメッセージを設定
-    nameError.style.display = "block"; // メッセージを表示
-  } else {
-    nameError.textContent = ""; // メッセージをクリア
-    nameError.style.display = "none"; // メッセージを非表示
-  }
-
-
-  const nameKanaInput = document.getElementById("name-kana");
-  const nameKanaError = document.getElementById("name-kana_error");
-
-  // 名前の必須チェック
-  if (!nameKanaInput.value.trim()) {
-    nameKanaError.textContent = "お名前(フリガナ)を入力してください。"; // エラーメッセージを設定
-    nameKanaError.style.display = "block"; // メッセージを表示
-  } else {
-    nameKanaError.textContent = ""; // メッセージをクリア
-    nameKanaError.style.display = "none"; // メッセージを非表示
-  }
+//   // 名前の必須チェック
+//   if (!nameInput.value.trim()) {
+//     nameError.textContent = "お名前を入力してください。"; // エラーメッセージを設定
+//     nameError.style.display = "block"; // メッセージを表示
+//   } else {
+//     nameError.textContent = ""; // メッセージをクリア
+//     nameError.style.display = "none"; // メッセージを非表示
+//   }
 
 
-  const telInput = document.getElementById("tel");
-  const telError = document.getElementById("tel_error");
+//   const nameKanaInput = document.getElementById("name-kana");
+//   const nameKanaError = document.getElementById("name-kana_error");
 
-  // 電話番号の必須チェック
-  if (!telInput.value.trim()) {
-    telError.textContent = "電話番号を入力してください。"; // エラーメッセージを設定
-    telError.style.display = "block"; // メッセージを表示
-  } else {
-    telError.textContent = ""; // メッセージをクリア
-    telError.style.display = "none"; // メッセージを非表示
-  }
-
-
-  const mailInput = document.getElementById("mail");
-  const mailError = document.getElementById("mail_error");
-
-  // メールアドレスの必須チェック
-  if (!mailInput.value.trim()) {
-    mailError.textContent = "メールアドレスを入力してください。"; // エラーメッセージを設定
-    mailError.style.display = "block"; // メッセージを表示
-  } else {
-    mailError.textContent = ""; // メッセージをクリア
-    mailError.style.display = "none"; // メッセージを非表示
-  }
-
-  const radioButtons = document.querySelectorAll('input[name="content"]');
-  const radioErrorMessage = document.getElementById("radio_error");
-
-  // 選択状態の確認
-  const isSelected = Array.from(radioButtons).some(radio => radio.checked);
-
-  if (!isSelected) {
-    // エラーメッセージを表示
-    radioErrorMessage.style.display = "block";
-  } else {
-    // エラーメッセージを非表示
-    radioErrorMessage.style.display = "none";
-  }
+//   // 名前の必須チェック
+//   if (!nameKanaInput.value.trim()) {
+//     nameKanaError.textContent = "お名前(フリガナ)を入力してください。"; // エラーメッセージを設定
+//     nameKanaError.style.display = "block"; // メッセージを表示
+//   } else {
+//     nameKanaError.textContent = ""; // メッセージをクリア
+//     nameKanaError.style.display = "none"; // メッセージを非表示
+//   }
 
 
-  const textareaInput = document.getElementById("textarea");
-  const textareaError = document.getElementById("textarea_error");
+//   const telInput = document.getElementById("tel");
+//   const telError = document.getElementById("tel_error");
 
-  // テキストエリアの必須チェック
-  if (!textareaInput.value.trim()) {
-    textareaError.textContent = "自由項目を入力してください。"; // エラーメッセージを設定
-    textareaError.style.display = "block"; // メッセージを表示
-  } else {
-    textareaError.textContent = ""; // メッセージをクリア
-    textareaError.style.display = "none"; // メッセージを非表示
-  }
+//   // 電話番号の必須チェック
+//   if (!telInput.value.trim()) {
+//     telError.textContent = "電話番号を入力してください。"; // エラーメッセージを設定
+//     telError.style.display = "block"; // メッセージを表示
+//   } else {
+//     telError.textContent = ""; // メッセージをクリア
+//     telError.style.display = "none"; // メッセージを非表示
+//   }
 
-  // プライバシーポリシーチェック
-  const privacyCheckbox = document.querySelector(".contact_form_privacy");
-  const errorMessage = document.querySelector(".privacy-error-message");
 
-  // チェックされていない場合
-  if (!privacyCheckbox.checked) {
-    event.preventDefault(); // フォーム送信を防ぐ
-    errorMessage.style.display = "block"; // エラーメッセージを表示
-    return;
-  }
+//   const mailInput = document.getElementById("mail");
+//   const mailError = document.getElementById("mail_error");
 
-  // チェックされている場合
-  errorMessage.style.display = "none"; // エラーメッセージを非表示
+//   // メールアドレスの必須チェック
+//   if (!mailInput.value.trim()) {
+//     mailError.textContent = "メールアドレスを入力してください。"; // エラーメッセージを設定
+//     mailError.style.display = "block"; // メッセージを表示
+//   } else {
+//     mailError.textContent = ""; // メッセージをクリア
+//     mailError.style.display = "none"; // メッセージを非表示
+//   }
 
-  console.log("フォームが送信されました");
+//   const radioButtons = document.querySelectorAll('input[name="content"]');
+//   const radioErrorMessage = document.getElementById("radio_error");
+
+//   // 選択状態の確認
+//   const isSelected = Array.from(radioButtons).some(radio => radio.checked);
+
+//   if (!isSelected) {
+//     // エラーメッセージを表示
+//     radioErrorMessage.style.display = "block";
+//   } else {
+//     // エラーメッセージを非表示
+//     radioErrorMessage.style.display = "none";
+//   }
+
+
+//   const textareaInput = document.getElementById("textarea");
+//   const textareaError = document.getElementById("textarea_error");
+
+//   // テキストエリアの必須チェック
+//   if (!textareaInput.value.trim()) {
+//     textareaError.textContent = "自由項目を入力してください。"; // エラーメッセージを設定
+//     textareaError.style.display = "block"; // メッセージを表示
+//   } else {
+//     textareaError.textContent = ""; // メッセージをクリア
+//     textareaError.style.display = "none"; // メッセージを非表示
+//   }
+
+//   // プライバシーポリシーチェック
+//   const privacyCheckbox = document.querySelector(".contact_form_privacy");
+//   const errorMessage = document.querySelector(".privacy-error-message");
+
+//   // チェックされていない場合
+//   if (!privacyCheckbox.checked) {
+//     event.preventDefault(); // フォーム送信を防ぐ
+//     errorMessage.style.display = "block"; // エラーメッセージを表示
+//     return;
+//   }
+
+//   // チェックされている場合
+//   errorMessage.style.display = "none"; // エラーメッセージを非表示
+
+//   console.log("フォームが送信されました");
+// });
+
+
+/*---------- top_kvスライドショー ----------*/
+
+const slideshow = new Swiper(".js_slideshow", {
+  speed: 1200,
+  effect: "fade",
+  pagination: {
+    el: ".swiper-pagination_slideshow",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next_slideshow",
+    prevEl: ".swiper-button-prev_slideshow",
+  },
+  autoplay: {
+    delay: 1600,
+    disableOnInteraction: false,
+  },
 });

@@ -1529,6 +1529,10 @@ img {
   height: 64px;
 }
 
+.js_top_service_trigger {
+  overflow: hidden;
+}
+
 /* ---------- top_company　---------- */
 .top_company {
   background-color: var(--white-color);

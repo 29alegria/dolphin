@@ -313,17 +313,36 @@ const slideshow = new Swiper(".js_slideshow", {
 });
 
 /*---------- top_serviceスライドイン----------*/
-gsap.from(".js_top_service", {
-  y: 200,
-  autoAlpha: 0,
-  duration: 1,
-  scrollTrigger: {
-    trigger: ".js_top_service_trigger",
-    start: "top center",
-    // once: true,
-  },
-  stagger: {
-    each: 0.6,
-    from: "start",
-  },
+const topServiceItems = document.querySelectorAll(".js_top_service");
+topServiceItems.forEach(function (item ,idx) {
+  gsap.from(item, {
+    x: (idx + 1) % 2 == 0 ? "100%" : "-100%",
+    autoAlpha: 0,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: item,
+      start: "top center",
+    },
+    stagger: {
+      each: 2.0,
+      from: "start",
+    },
+  });
 });
+
+const topSectionTitleItems = document.querySelectorAll(".js_section-title")
+topSectionTitleItems.forEach(function (item) {
+  gsap.from(item, {
+    y: 100,
+    autoAlpha: 0,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: item,
+      // start: "top center",
+    },
+  });
+});
+
+/*---------- top_section-titleスライドイン----------*/

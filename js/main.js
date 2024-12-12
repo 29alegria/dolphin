@@ -311,3 +311,19 @@ const slideshow = new Swiper(".js_slideshow", {
     disableOnInteraction: false,
   },
 });
+
+/*---------- top_serviceスライドイン----------*/
+gsap.from(".js_top_service", {
+  y: 200,
+  autoAlpha: 0,
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".js_top_service_trigger",
+    start: "top center",
+    // once: true,
+  },
+  stagger: {
+    each: 0.6,
+    from: "start",
+  },
+});

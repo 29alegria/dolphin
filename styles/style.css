@@ -2089,7 +2089,7 @@ iframe {
 
 .philosophy_img-wrapper {
   width: 100%;
-  margin: 40px auto;
+  margin: 64px auto 0;
 }
 
 .philosophy_img {
@@ -2105,6 +2105,7 @@ iframe {
   font-size: 20px;
   font-weight: bold;
   text-align: center;
+  margin-top: 40px;
 }
 
 .philosophy_txt__emphasis {
@@ -2124,13 +2125,17 @@ iframe {
 
 .guide_list {
   list-style: disc;
-  margin-top: 40px;
+  margin-top: 64px;
   padding-left: 16px;
 }
 
 .guide_item {
   font-size: 20px;
   font-weight: bold;
+}
+
+.guide_item:not(:first-child) {
+  margin-top: 24px;
 }
 
 /* ---------- m_article ---------- */
@@ -2322,7 +2327,7 @@ iframe {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 56px;
+  margin-top: 64px;
   gap: 8px;
 }
 

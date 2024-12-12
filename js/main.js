@@ -331,6 +331,8 @@ topServiceItems.forEach(function (item ,idx) {
   });
 });
 
+
+/*---------- top_section-titleスライドイン----------*/
 const topSectionTitleItems = document.querySelectorAll(".js_section-title")
 topSectionTitleItems.forEach(function (item) {
   gsap.from(item, {
@@ -344,5 +346,3 @@ topSectionTitleItems.forEach(function (item) {
     },
   });
 });
-
-/*---------- top_section-titleスライドイン----------*/

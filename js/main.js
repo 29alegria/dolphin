@@ -1,14 +1,4 @@
 /*---------- hamburger-menu ---------- */
-// const hamburger = document.querySelector(".js_hamburger");
-// const navigation = document.querySelector(".js_navigation");
-// const body = document.querySelector(".js_body");
-
-// hamburger.addEventListener("click", () => {
-//   hamburger.classList.toggle("is-active");
-//   navigation.classList.toggle("is-active");
-//   body.classList.toggle("is-active");
-// });
-
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".js_hamburger");
   const navigation = document.querySelector(".js_navigation");
@@ -59,47 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-/*---------- header-submenu ----------*/ 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const navItem = document.querySelector(".l_header-nav_item:nth-child(3)"); // 3つ目のl_header-nav_item
-//   const navLink = document.querySelector(".l_header-nav_item:nth-child(3) > .l_header-nav_link"); // 会社情報リンク
-//   const subNavList = document.querySelector(".l_header-nav_item:nth-child(3) .l_header-subnav_list"); // サブメニュー
-
-//   // 初期状態を設定
-//   subNavList.style.height = "0";
-//   subNavList.style.overflow = "hidden";
-//   subNavList.style.transition = "height 0.3s ease, margin-top 0.05s ease"; // 高さアニメーションの設定
-//   navItem.style.transition = "padding 0.05s ease"; // 高さアニメーションの設定
-
-//   navLink.addEventListener("click", (e) => {
-//     e.preventDefault(); // デフォルトのリンク動作を防止
-//     e.stopPropagation(); // 他のクリックイベントへの影響を防ぐ
-
-//     // サブメニューの開閉を切り替え
-//     if (subNavList.style.height === "0px") {
-//       // subNavList.style.height = `${subNavList.scrollHeight}px`; // 高さを設定
-//       subNavList.classList.add("is-open"); // クラス追加 (margin-topを適用)
-//       subNavList.style.height = "250px";
-//       navItem.classList.add("is-open"); // 開いている状態のクラスを追加
-//     } else {
-//       subNavList.style.height = "0"; // 高さを0に設定して閉じる
-//       subNavList.addEventListener(
-//         "transitionend",
-//         () => {
-//           if (subNavList.style.height === "0px") {
-//             // 少し遅れて margin-top をリセット
-//             requestAnimationFrame(() => {
-//               subNavList.classList.remove("is-open");
-//               navItem.classList.remove("is-open"); // クラスを削除
-//             });
-//           }
-//         },
-//         { once: true }
-//       );
-//     }
-//   });
-// });
-
+/*---------- header-submenu ----------*/
 document.addEventListener("DOMContentLoaded", () => {
   const navItem = document.querySelector(".l_header-nav_item:nth-child(3)"); // 3つ目のl_header-nav_item
   const navLink = document.querySelector(".l_header-nav_item:nth-child(3) > .l_header-nav_link"); // 会社情報リンク

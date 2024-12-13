@@ -811,9 +811,16 @@ img {
   width: 100%;}
 
 .m_opening_logo-wrapper {
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  height: 150px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .m_opening_logo-wrapper {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 .m_opening_txt {
@@ -825,8 +832,9 @@ img {
 .m_opening_heading {
   /* color: var(--accent-color); */
   color: var(--base-color);
-  font-size: 40px;
+  font-size: 28px;
   font-weight: bold;
+  margin-top: 40px;
 }
 
 @media screen and (min-width: 768px) {
@@ -842,6 +850,12 @@ img {
   font-size: 20px;
   margin-top: 16px;
   /* headingとの上下余白 */
+}
+
+@media screen and (min-width: 768px) {
+  .m_opening_desc {
+    font-size: 28px;
+  }
 }
 
 .js_opening.is-active {

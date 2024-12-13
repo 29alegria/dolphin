@@ -575,6 +575,12 @@ img {
   margin-top: 40px;
 }
 
+@media screen and (min-width: 768px) {
+  .l_footer_sns-info {
+    justify-content: flex-start;
+  }
+}
+
 .l_footer_sns-wrapper {
   width: 40px;
   height: 40px;

@@ -85,6 +85,10 @@ img {
   padding: 120px 0;
 }
 
+.l_contents-sm {
+  padding: 80px 0;
+}
+
 /* ---------- l_header ----------- */
 .l_header {
   height: 72px;
@@ -1003,6 +1007,13 @@ img {
 .m_breadcrumb li {
   display: flex;
   gap: 16px;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .m_breadcrumb li {
+    font-size: 16px;
+  }
 }
 
 .m_breadcrumb li:last-child {
@@ -2488,27 +2499,7 @@ iframe {
   position: absolute;
   top: 50%;
   left: 32%;
-  /* relativeを基準にabsoluteで指定したtopとleftの位置に配置する。
-  positionとtransform・translateを使って上下左右中央寄せすることが可能。
-  {
-  position: absolute;
-  top: 50%;要素の左上を起点に上から半分の50%の位置
-  left: 50%;要素の左上を起点に左から半分の50％の位置⇒要素の左上が上下左右中央の中心位置にくる。そのため、要素の中央を中心位置にさせるためにtransform: translateを使用。
-  transform: translate(-50%,-50%);要素がX（横方向）に―50%（要素のwidthの半分）移動、さらにY（縦方向）に―50%（要素のheightの半分）移動
-  }
-  しかし今回は回転させた矢印のため上下中央寄せのみ。
-  {
-  position: absolute;
-  top: 50%;要素の左上を起点に上から半分の50%の位置
-  left: 32%;目分量
-  transform: translateY(-50%) rotate(45deg);X方向（横方向）はleftで目分量調整しているためtranslateXは要らない。
-  }
-  */
-
   transform: translateY(-50%) rotate(45deg);
-  /* 要素変形
-  translate⇒Xは横（＋は右、－は左）、Yは縦（＋は下、－は上）
-  rotate⇒回転 */
 }
 
 .m_sidebar {
@@ -2654,7 +2645,7 @@ iframe {
 }
 
 /* ---------- single-blog ----------- */
-.single_article_wrapper {
+/* .single_article_wrapper {
   padding-top: 72px;
 }
 
@@ -2662,7 +2653,7 @@ iframe {
   .single_article_wrapper {
     padding-top: 80px;
   }
-}
+} */
 
 .single_article_meta {
   margin-top: 24px;

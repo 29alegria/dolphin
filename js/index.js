@@ -4,16 +4,23 @@ function openingAnime() {
 
   gsap.timeline()
     .from(".js_opening-logo",{
-      duration: 1.2,
+      duration: 2,
       autoAlpha: 0,
-      y: 40,      
-    }).from(".js_opening-txt", {
+      y: 40,
+    })
+    .to(".js_opening-logo", {
+      duration:0.6,
+      scale: 0.8,
+      y: 40,
+
+    })
+    .from(".js_opening-txt", {
       duration: 2,
       autoAlpha: 0,
       y: 40,
     }).to(".js_opening", {
       autoAlpha: 0,
-      duration: 2,
+      duration: 1.5,
       onComplete: function () {
         body.classList.toggle("is-active");
       },

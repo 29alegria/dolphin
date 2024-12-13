@@ -803,7 +803,8 @@ img {
   z-index: var(--z-index-modal);
   /* 200 */
   /* background: var(--base-color); */
-  background: linear-gradient(to bottom, #FDEB71 0%, #FFCC58 60%, #FFCC58 100%);;
+  /* background: linear-gradient(to bottom, #FDEB71 0%, #FFCC58 60%, #FFCC58 100%);; */
+  background-color: var(--point-color);
   display: flex;
 }
 

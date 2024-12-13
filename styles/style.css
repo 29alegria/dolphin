@@ -436,7 +436,9 @@ img {
   画面全体のスクロールを固定する。
   ※overflow: hidden;をbody要素に適用することで、画面全体のスクロールを固定することができます。
   そもそもスクロールできるのは縦長にな画面幅をはみ出しているから。
-  そのはみ出した部分をoverflow: hidden;することで見えている画面よりも高さを持たなくなり固定される。*/}
+  そのはみ出した部分をoverflow: hidden;することで見えている画面よりも高さを持たなくなり固定される。*/
+}
+
 .js_navigation {
   /* SP時（ハンバーガーメニュークリックされていない
   ＝ナビゲーションメニュー開いておらず透明で重なっている） */
@@ -787,6 +789,66 @@ img {
   color: var(--base-color);
 }
 
+/* ---------- m_opening ---------- */
+.m_opening {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--z-index-modal);
+  /* 200 */
+  /* background: var(--base-color); */
+  background: linear-gradient(to bottom, #FDEB71 0%, #FFCC58 60%, #FFCC58 100%);;
+  display: flex;
+}
+
+.m_opening_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;}
+
+.m_opening_logo-wrapper {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.m_opening_txt {
+  text-align: center;
+  /* txt内のheadingとdescが中央寄せ */
+  margin: auto;
+}
+
+.m_opening_heading {
+  /* color: var(--accent-color); */
+  color: var(--base-color);
+  font-size: 40px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .m_opening_heading {
+    font-size: 56px;
+  }
+}
+
+.m_opening_desc {
+  /* color: var(--accent-color); */
+  color: var(--base-color);
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 16px;
+  /* headingとの上下余白 */
+}
+
+.js_opening.is-active {
+  /* オープニングアニメーションのまとまり */
+  opacity: 0;
+  visibility: hidden;
+}
 /* ---------- m_kv ----------- */
 .m_kv {
   padding-top: 72px;

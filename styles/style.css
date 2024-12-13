@@ -831,7 +831,7 @@ img {
 
 @media screen and (min-width: 768px) {
   .m_opening_heading {
-    font-size: 56px;
+    font-size: 48px;
   }
 }
 
@@ -839,7 +839,7 @@ img {
   /* color: var(--accent-color); */
   color: var(--base-color);
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
   margin-top: 16px;
   /* headingとの上下余白 */
 }
@@ -1364,6 +1364,27 @@ img {
   .top_kv_copy {
     font-size: 48px;
   }
+}
+
+.js_copy span {
+  display: inline-block;
+  position: relative;
+  /* 下線用のグラデーション設定
+    上部〜calc(100%-2px)まではtransparent、
+     下2pxがvar(--main-color)のラインとして表示 */
+  background-image: linear-gradient(
+    transparent 0%,
+    transparent calc(100% - 8px),
+    var(--main-color) calc(100% - 8px),
+    var(--main-color) 100%
+  );
+  background-repeat: no-repeat;
+  /* background-position: left bottom;
+  background-size: 0% 100%;  */
+  background-position: 0 bottom;
+  background-size: 0% 8px; /* 下線の太さを4pxに変更 */
+
+  line-height: 1;
 }
 
 .top_kv_sub-copy {
